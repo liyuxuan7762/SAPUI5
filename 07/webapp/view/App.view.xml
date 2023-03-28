@@ -1,0 +1,21 @@
+<mvc:View
+	controllerName="sap.ui5.walkthrough.controller.App" 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<!-- 一个按钮 -->
+	<Button
+		text="Say Hello"
+		press=".onShowHello"
+	/>
+	<!-- 一个输入框 -->
+	<!-- valueLiveUpdate 表示双向绑定 -->
+	<!-- {/recipient/name} 就相当于在Java中从Properties文件中取值 -->
+	<Input 
+		id="myInput"
+		value="{/recipient/name}"
+		description="Hello {/recipient/name}"
+		valueLiveUpdate="true" 
+		width="60%"
+	 />
+</mvc:View>
+

@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="sap.ui5.walkthrough.controller.App" 
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Button
+		text="Say Hello"
+		press=".onShowHello"/>
+</mvc:View>
+
+<!-- controllerName 用于指定View对应的Controller代码 -->
+<!-- 第三行，用于指定当前xml的默认命名空间 -->
+<!-- 第四行，用于给sap.ui.core.mvc起一个别名，别名为mvc -->
+
+<!-- 第五行，定义一个 Button 实例，指定其点击响应事件(press) 的处理函数为 onShowHello. 
+这个函数当然是实现在这个视图对应的控制器，即 App.controller.js 里了。 -->
