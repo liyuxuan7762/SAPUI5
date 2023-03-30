@@ -1,0 +1,8 @@
+{
+	"sap.app": {
+		"id": "sap.ui5.walkthrough.14-myImplementation",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	}
+}

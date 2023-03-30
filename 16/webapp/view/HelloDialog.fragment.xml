@@ -1,0 +1,26 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+   <Dialog
+      id="helloDialog"
+      title="Hello {/recipient/name}">
+      <content>
+         <c:Icon 
+            src="sap-icon://hello-world"
+            size="8rem"
+            class="sapUiMediumMargin"
+         />
+      </content>
+      <beginButton>
+         <Button 
+            text="{i18n>dialogCloseButtonText}"
+            press=".onClosingDialog"
+         />
+      </beginButton>
+   </Dialog>
+</c:FragmentDefinition>
+
+<!-- 因为 Fragment 本身没有绑定控制器实现，
+所以 onCloseDialog 函数实现在 Fragment 所在的 XML 视图 HelloPanel.view.xml 对应的控制器 HelloPanel.controller.js 里。 -->
+<!-- 谁创建的Fragment，那么fragment的js代码就写在谁的视图对应的controller.js中 -->
