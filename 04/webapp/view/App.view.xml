@@ -1,5 +1,103 @@
 <mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui5.walkthrough.controller.App"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Text text="Hello World"/>
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+>
+	<Shell
+		appWidthLimited="true"
+		backgroundColor=""
+		backgroundImage=""
+		backgroundOpacity="1"
+		backgroundRepeat="false"
+		headerRightText=""
+		homeIcon=""
+		logo=""
+		showLogout="true"
+		title=""
+		titleLevel="H1"
+	>
+		<App>
+		<pages>
+				<Page title="Tool Number Maintain" showNavButton="true" titleAlignment="Center">
+					<headerContent>
+						<Button icon="sap-icon://eraser" tooltip="eraser" press="onEraser" />
+					</headerContent>
+					<content>
+						<Panel
+							accessibleRole="Form"
+							backgroundDesign="Translucent"
+							expandAnimation="true"
+							expandable="false"
+							expanded="false"
+							headerText="Site"
+							height="auto"
+							width="100%"
+						>
+							<content>
+								<Input width="100%" id="site" value="0480" type="Number" showValueHelp="true" />
+							</content>
+						</Panel>
+
+						<Panel
+							accessibleRole="Form"
+							backgroundDesign="Translucent"
+							expandAnimation="true"
+							expandable="false"
+							expanded="false"
+							headerText="Tool Numbers"
+							height="auto"
+							width="100%"
+						>
+							<content>
+								<MultiInput id="toolNumbers" placeholder="Tool Nums" maxTokens="5" enableMultiLineMode="true" showValueHelp="true" enabled="true" visible="true" required="false" valueStateText="Invalid entry" width="100%" valueHelpOnly="false" maxLength="0">
+									<tokens>
+										<Token text="Value 1" editable="false" selected="true"/>
+									</tokens>
+								</MultiInput>
+							</content>
+						</Panel>
+
+						<Panel
+							accessibleRole="Form"
+							backgroundDesign="Translucent"
+							expandAnimation="true"
+							expandable="false"
+							expanded="false"
+							headerText="Status"
+							height="auto"
+							width="100%"
+						>
+							<content>
+								<ComboBox selectedKey="Enable" editable="true" enabled="true" visible="true" width="100%" valueState="None" maxWidth="100%">
+									<items>
+										<core:Item text="Enable" enabled="true" key="Enable"/>
+										<core:Item text="Disable" enabled="true" key="Disable"/>
+									</items>
+								</ComboBox>
+							</content>
+						</Panel>
+					</content>
+
+					<Panel
+						accessibleRole="Form"
+						backgroundDesign="Translucent"
+						expandAnimation="true"
+						expandable="false"
+						expanded="false"
+						headerText="Operation"
+						height="auto"
+						width="100%"
+					>
+						<content>
+							<Button text="Save"  type="Default" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin"/>
+							<Button text="Clear" press="onEraser" type="Default" icon="sap-icon://cancel" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin"/>
+						</content>
+					</Panel>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+	
 </mvc:View>
