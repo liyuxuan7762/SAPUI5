@@ -1,0 +1,12 @@
+/* sapMBtn myCustomButton 
+   其中sapMBtn是sap默认按钮的类，这个在将xml编译成html的时候会自动添加
+*/
+html .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 10px;
+}
+
+.myAppDemoWT .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+    color:red
+}

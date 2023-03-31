@@ -1,5 +1,96 @@
 <mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="sap.ui5.walkthrough.controller.App"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Text text="Hello World"/>
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+>
+	<Shell
+		backgroundColor=""
+		backgroundImage=""
+		headerRightText=""
+		homeIcon=""
+		logo=""
+		title=""
+	>
+		<App>
+			<pages>
+				<Page
+					title="Tool Number Maintain"
+					showNavButton="true"
+					titleAlignment="Center"
+				>
+					<headerContent>
+						<Button
+							icon="sap-icon://eraser"
+							tooltip="eraser"
+							press="onEraser"
+						/>
+					</headerContent>
+					<content>
+						<Panel
+							headerText="Site"
+						>
+							<content>
+								<Input
+									width="100%"
+									id="site"
+									value="0480"
+									type="Number"
+									showValueHelp="true"
+									valueHelpRequest="siteDialogPress"
+								/>
+							</content>
+						</Panel>
+						<Panel
+							headerText="Tool Numbers"
+						>
+							<content>
+								<MultiInput
+									id="toolNumbers"
+									placeholder="Tool Nums"
+									maxTokens="5"
+									showValueHelp="false"
+									valueStateText="Invalid entry"
+									width="100%"
+
+								>
+									<tokens>
+										<Token
+											text="Value 1"
+											editable="false"
+											selected="true"
+										/>
+									</tokens>
+								</MultiInput>
+							</content>
+						</Panel>
+						<Panel headerText="Status" >
+							<content>
+								<ComboBox
+									id="cbbStatus"
+									required="true"
+									width="100%"
+									selectedKey="1"
+									items="{
+										path: '/status',
+										sorter: { path: 'text' }
+									}"
+									change="handleChange"
+								>
+									<core:Item text="{text}" key="{key}" />
+								</ComboBox>
+							</content>
+						</Panel>
+					</content>
+					<Panel headerText="Operation">
+						<content>
+							<Button text="Save" icon="sap-icon://save" width="auto" iconDensityAware="false" class="sapUiTinyMargin"/>
+							<Button text="Clear" press="onEraser" icon="sap-icon://cancel" width="auto" iconDensityAware="false" class="sapUiTinyMargin"/>
+						</content>
+					</Panel>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>

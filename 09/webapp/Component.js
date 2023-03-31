@@ -7,6 +7,7 @@ sap.ui.define([
    return UIComponent.extend(
       "sap.ui5.walkthrough.Component",
       {
+         // 指定的是应用一开始打开的哪一个XML文件
          metadata: {
             "interfaces": ["sap.ui.core.IAsyncContentCreation"],
             "rootView": {
